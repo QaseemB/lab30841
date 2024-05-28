@@ -38,12 +38,12 @@
 
 
 
-let CSV = 'ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctors Assistant,26';
-let CSVwithout_commas = CSV.replaceAll(',', ' '); 
-let rows = CSVwithout_commas.split('\n');  
-let firstRow = rows[0]
-let columns = firstRow.split(',')
-let columnSize = columns.length
+// let CSV = 'ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctors Assistant,26';
+// let CSVwithout_commas = CSV.replaceAll(',', ' '); 
+// let rows = CSVwithout_commas.split('\n');  
+// let firstRow = rows[0]
+// let columns = firstRow.split(',')
+// let columnSize = columns.length
 // console.log(columns);  
 
 // let dblArray = rows.map(row => row.split(','));
@@ -62,7 +62,21 @@ let columnSize = columns.length
 // For instance, the results of the example data above being passed through this step are as follows:
 
 
-let arrayObj = rows.map(row => ({id: row.split(' ')}))
+let CSV = 'ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctors Assistant,26';
+let rows = CSV.split('\n');  
+// let firstRow = rows[0]
+// let columns = firstRow.split(',')
+
+
+let arrayObj = rows.slice(1).map(row =>{
+    let columns = row.split(',');
+    return {
+        id: columns[0],
+        name: columns[1],
+        occupation: columns[2],
+        age: columns[3]
+    
+    };
+});
+
 console.log(arrayObj)
-
-
