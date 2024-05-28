@@ -44,4 +44,7 @@ let rows = CSVwithout_commas.split('\n');
 let firstRow = rows[0]
 let columns = firstRow.split(',')
 let columnSize = columns.length
-console.log(columns);  
+// console.log(columns);  
+
+let dblArray = rows.map(row => row.split(','));
+console.log(dblArray)
