@@ -113,16 +113,18 @@ let arrayObj = rows.slice(1).map(row =>{
     }; 
 });
 
-let columnsCopy = [...arrayObj];
+// let columnsCopy = [...arrayObj];
 
-// let newPersons = ('7', 'bilbo', 'none', '111')
-let newPersons = { id: '7', name: 'bilbo', occupation: 'none', age: '111' };
-// console.log(RemovedPersons)
-columnsCopy.splice(3,1)
+// // let newPersons = ('7', 'bilbo', 'none', '111')
+// let newPersons = { id: '7', name: 'bilbo', occupation: 'none', age: '111' };
+// // console.log(RemovedPersons)
+// columnsCopy.splice(3,1)
 
 
-columnsCopy.splice(4,0,newPersons)
-// console.log(columnsCopy)
+// columnsCopy.splice(4,0,newPersons)
+// // console.log(columnsCopy)
+
+//                            pt5
 
 let newCSV = columns.join(',') + '\n'; 
 newCSV += columnsCopy.map(obj => Object.values(obj).join(',')).join('\n');
