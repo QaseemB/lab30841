@@ -122,5 +122,10 @@ columnsCopy.splice(3,1)
 
 
 columnsCopy.splice(4,0,newPersons)
-console.log(columnsCopy)
+// console.log(columnsCopy)
+
+let newCSV = columns.join(',') + '\n'; 
+newCSV += columnsCopy.map(obj => Object.values(obj).join(',')).join('\n');
+
+console.log(newCSV);
 
