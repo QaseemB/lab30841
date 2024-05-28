@@ -46,5 +46,23 @@ let columns = firstRow.split(',')
 let columnSize = columns.length
 // console.log(columns);  
 
-let dblArray = rows.map(row => row.split(','));
-console.log(dblArray)
+// let dblArray = rows.map(row => row.split(','));
+// console.log(dblArray)
+
+
+
+//                                         Part 3: Transforming Data
+// While the data is now much more workable than it was in its string format, there is still a large amount of obscurity in the data itself. When we access an arbitrary index of the results array, it is impossible to know what that data is referring to without additional cross-referencing.
+// In order to make it more obvious what the data is, we will transform our rows into objects.
+// Implement the following:
+// For each row of data in the result array produced by your code above, create an object where the key of each value is the heading for that value’s column.
+// Convert these keys to all lowercase letters for consistency.
+// Store these objects in an array, in the order that they were originally listed.
+// Since the heading for each column will be stored in the object keys, you do not need to create an object for the heading row itself.
+// For instance, the results of the example data above being passed through this step are as follows:
+
+
+let arrayObj = rows.map(row => ({id: row.split(' ')}))
+console.log(arrayObj)
+
+
