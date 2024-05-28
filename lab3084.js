@@ -115,10 +115,12 @@ let arrayObj = rows.slice(1).map(row =>{
 
 let columnsCopy = [...arrayObj];
 
-let newPersons = ('7', 'bilbo', 'none', '111')
+// let newPersons = ('7', 'bilbo', 'none', '111')
+let newPersons = { id: '7', name: 'bilbo', occupation: 'none', age: '111' };
 // console.log(RemovedPersons)
 columnsCopy.splice(3,1)
-console.log(removedPersons)
 
-// addPersons = columnsCopy
+
+columnsCopy.splice(4,0,newPersons)
+console.log(columnsCopy)
 
